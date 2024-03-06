@@ -9,16 +9,27 @@
 </head>
 <body>
     <div id="loading" class="hidden">Loading...</div>
-    <div id="content" class="hidden">
-        <h1>Web Scraper Dashboard</h1>
-        <form id="scrapeForm">
-            <input type="text" id="urlInput" placeholder="Enter URL to scrape">
-            <button type="submit">Scrape</button>
-        </form>
-        <div id="results"></div>
-        <div id="dynamicContent">
-            <!-- Dynamic content will be added here by script.js -->
-        </div>
+    <div id="dashboard">
+        <header>
+            <h1>Web Scraper Dashboard</h1>
+        </header>
+        <main>
+            <section id="formSection">
+                <form id="scrapeForm">
+                    <input type="text" id="urlInput" placeholder="Enter URL to scrape">
+                    <button type="submit">Scrape</button>
+                </form>
+            </section>
+            <section id="resultsSection">
+                <div id="results"></div>
+            </section>
+            <section id="dynamicSection">
+                <div id="dynamicContent">
+                    <!-- Dynamic content will be added here by script.js -->
+                </div>
+            </section>
+            
+        </main>
     </div>
     <script src="script.js"></script>
 </body>

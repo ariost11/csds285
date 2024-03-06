@@ -4,6 +4,9 @@ const cheerio = require('cheerio');
 const cors = require('cors');
 const url = require('url');
 
+const fs = require('fs').promises;
+const { exec } = require('child_process');
+
 const app = express();
 const PORT = 3000;
 
@@ -75,5 +78,7 @@ app.get('/scrape', async (req, res) => {
         res.status(500).json({ error: 'Failed to scrape the URL' });
     }
 });
+
+
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
