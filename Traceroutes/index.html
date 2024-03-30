@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traceroute App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body>
+    <div class="container">
+        <h1>Traceroute App</h1>
+        <div class="input-container">
+            <input type="text" id="destinationInput" value="8.8.8.8">
+            <button id="tracerouteBtn">Trace Route</button>
+        </div>
+        <div id="result"></div>
+        <div id="statistics">
+            <canvas id="linksChart" width="400" height="200"></canvas>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
