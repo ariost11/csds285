@@ -4,7 +4,7 @@ from datetime import datetime
 import sys
 import json
 
-google_ips = ['142.250.191.46']
+google_ips = '142.250.191.46'
 target_port = 80
 source_port = 4152
 
