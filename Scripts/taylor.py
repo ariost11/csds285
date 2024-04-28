@@ -14,14 +14,15 @@ def most_common_words_by_letter(filename):
         for word in words:
             first_letter = word[0]
 
-            if first_letter.isalpha():
+            if first_letter.isalpha() and word != 'x2]':
                 common_words_by_letter[first_letter].append(word)
 
     for letter, word_list in common_words_by_letter.items():
         if word_list:
             counter = Counter(word_list)
-            most_common_word = counter.most_common(1)[0][0]
-            common_words_by_letter[letter] = most_common_word
+            max_count = max(counter.values())
+            most_common_words = [word for word, count in counter.items() if count == max_count]
+            common_words_by_letter[letter] = most_common_words
 
     return common_words_by_letter
 
@@ -29,5 +30,6 @@ filename = "all_tswift_lyrics.txt"
 
 result = most_common_words_by_letter(filename)
 
-for letter, word in result.items():
-    print(f"'{letter}': {word}")
+for letter, words in result.items():
+    if words:
+        print(f"'{letter}': {', '.join(words)}")
